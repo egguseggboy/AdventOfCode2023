@@ -6,7 +6,4 @@ public class Node {
 		this.left = nodes[1];
 		this.right = nodes[2];
 	}
-
-	
-
 }

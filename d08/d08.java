@@ -110,13 +110,10 @@ public class d08 {
 
 		ArrayList<Long> allFactors = new ArrayList<>();
 
-		for (NodeInfo n : nodeInfos) {
-			// System.out.print(String.format("%dx + %d + %d", n.cycleLen, n.cycleOffset, n.endsInZInd.get(0)));
-
+		for (NodeInfo n : nodeInfos)
 			for (long f : getFactors(n.cycleLen))
 				if (allFactors.indexOf(f) == -1)
 					allFactors.add(f);
-		}
 
 		long lcm = 1;
 		for (long f : allFactors) lcm *= f;
