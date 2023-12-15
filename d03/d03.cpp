@@ -1,8 +1,6 @@
-#include <algorithm>
 #include <fstream>
 #include <math.h>
 #include <iostream>
-#include <sstream>
 #include <string>
 #include <vector>
 
