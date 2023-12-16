@@ -44,14 +44,17 @@ long part2(std::string line) {
 		auto tokens = regexSplit(step, std::regex("[-=]"));
 		std::string label = tokens.at(0);
 
+		// Remove lens with label
 		if (step.ends_with('-'))
 			for (auto &box : boxes)
 				box.erase(std::remove_if(box.begin(), box.end(),
 				[label](const lens &l) { return l.label == label; }), box.end());
+		// Add/update lens with focal length
 		else {
 			int focalLen = stoi(tokens.at(1));
 			int labelFound = false;
 
+			// Look for existing lens with label, update
 			for (auto &box : boxes)
 				for (auto &l : box)
 					if (l.label == label) {
@@ -60,6 +63,7 @@ long part2(std::string line) {
 						break;
 					}
 
+			// No existing label, add
 			if (!labelFound)
 				boxes[hash(label)].push_back(lens(label, focalLen));
 		}
