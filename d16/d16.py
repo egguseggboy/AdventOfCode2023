@@ -1,3 +1,5 @@
+# NOTE: PART 2'S SOLUTION IS VERY SLOW. THIS WILL NOT BE FINAL (I HOPE)
+
 def mover(lines, startPtDir):
 	powered = set()
 	visited = []
@@ -41,9 +43,9 @@ def mover(lines, startPtDir):
 def part1(lines):
 	return mover(lines, ((0, -1), (0, 1)))
 
-# this shit takes several minutes to run
 def part2(lines):
 	maxPowered = 0
+
 	for i in range(len(lines)):
 		maxPowered = max(maxPowered, 
 			# From left moving right
