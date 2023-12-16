@@ -9,8 +9,7 @@
 #define hashMapLen 256
 
 struct lens {
-	std::string label;
-	int focalLen;
+	std::string label; int focalLen;
 
 	lens(std::string label, int focalLen) {
 		this->label = label;
