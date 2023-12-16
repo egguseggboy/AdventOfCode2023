@@ -55,9 +55,8 @@ def part2(lines):
 			# From bottom moving up
 			mover(lines, ((len(lines), i), (-1, 0))),
 		)
-		
+
 		print(i, maxPowered)
-	
 
 	return maxPowered
 
